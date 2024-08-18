@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./styles/variables";
+
+html,
+body {
+  position: relative;
+  background-color: var(--pageBG);
+  padding: 0;
+  margin: 0;
+  color: var(--textColor);
+  font-family: "Poppins", "Cookie", "Raleway", cursive, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p {
+  padding: 0;
+}
+.container-fluid {
+  position: relative;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.container {
+  position: relative;
+}
+
+a,
+a:hover {
+  color: var(--textColor);
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}

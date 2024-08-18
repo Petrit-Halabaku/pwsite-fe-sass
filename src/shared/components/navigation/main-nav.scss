@@ -1,0 +1,159 @@
+/* ------------------------------- buger menu ------------------------------- */
+.navigation__menu-btn {
+  display: none;
+}
+
+/* ---------------------------------- logo ---------------------------------- */
+.navigation__title {
+  color: var(--textColor);
+  font-family: var(--cookieFont);
+  font-size: 116px;
+  z-index: 5;
+}
+.navigation__title:hover a {
+  text-decoration: none;
+  color: currentColor;
+  animation: wheelHueColor 10s infinite;
+}
+@keyframes wheelHueColor {
+  from,
+  to {
+    color: hsl(27, 50%, 52%);
+  }
+  10% {
+    color: hsl(43, 58%, 72%);
+  }
+  15% {
+    color: hsl(59, 71%, 61%);
+  }
+  20% {
+    color: hsl(220, 47%, 56%);
+  }
+  25% {
+    color: hsl(301, 68%, 84%);
+  }
+  30% {
+    color: hsl(103, 22%, 78%);
+  }
+  35% {
+    color: hsl(108, 65%, 35%);
+  }
+  40% {
+    color: hsl(180, 75%, 35%);
+  }
+  45% {
+    color: hsl(216, 60%, 35%);
+  }
+  50% {
+    color: hsl(252, 65%, 35%);
+  }
+  55% {
+    color: hsl(122, 36%, 43%);
+  }
+  60% {
+    color: hsl(43, 58%, 72%);
+  }
+  65% {
+    color: hsl(59, 85%, 58%);
+  }
+  70% {
+    color: hsl(72, 75%, 35%);
+  }
+  75% {
+    color: hsl(31, 68%, 73%);
+  }
+  80% {
+    color: hsl(144, 75%, 35%);
+  }
+  85% {
+    color: hsl(108, 65%, 35%);
+  }
+  90% {
+    color: hsl(180, 75%, 35%);
+  }
+  95% {
+    color: hsl(216, 60%, 35%);
+  }
+  100% {
+    color: hsl(252, 65%, 35%);
+  }
+}
+
+/* ------------------------------- navigation ------------------------------- */
+.navigation__header-nav {
+  //   max-width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  //   justify-content: space-evenly;
+  z-index: 5;
+}
+
+.navigation__mobile-nav {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .navigation__mobile-nav {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
+    z-index: 25;
+  }
+
+  .navigation__header-nav {
+    display: none;
+  }
+  .navigation__menu-btn {
+    width: 2.5em;
+    height: 2em;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.2rem;
+    cursor: pointer;
+    z-index: 6;
+    &:hover span:nth-child(2) {
+      width: 100%;
+    }
+    &:hover span:nth-child(3) {
+      width: 100%;
+    }
+    &:active,
+    &:focus {
+      & span:first-child {
+        transform: rotate(45deg);
+      }
+      & span:nth-child(2) {
+        width: 0;
+      }
+      & span:last-child {
+        transform: translateY(-1rem) rotate(-45deg);
+      }
+    }
+  }
+
+
+
+  .navigation__menu-btn span {
+    width: 100%;
+    height: 5px;
+    background-color: var(--textColor);
+    display: block;
+    margin: auto;
+    transition: width 0.5s;
+
+    &:nth-child(2) {
+      width: 2rem;
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      width: 1.5rem;
+      margin-right: 0;
+    }
+  }
+}

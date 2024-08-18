@@ -1,0 +1,60 @@
+.navigation-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navigation__item {
+  // max-width: 7rem;
+  width: 123px;
+  height: inherit;
+  font-family: var(--poppinsFont);
+  font-weight: var(--medium);
+  font-size: 22px;
+  text-align: center;
+  transition: all 350ms;
+  transition-delay: 0s;
+  padding-bottom: 1.3rem;
+  &:hover {
+    background: var(--bgRed);
+  }
+}
+
+.navigation__item a {
+  width: 100%;
+  height: inherit;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ----------------------------- mesh decoration ---------------------------- */
+.navigation__dotted-mesh {
+  width: 30%;
+  // height: 150%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  padding: 0 2rem;
+  // display: flex;
+  // flex: 0 1 30%;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation-links {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  .navigation__item {
+    width: 100%;
+    border-radius: 10px;
+    margin: 1rem auto;
+  }
+}
